@@ -1,0 +1,280 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffd6eb;
+  background-image: url('https://i.pinimg.com/736x/cf/f0/3d/cff03def3865a35eeea2140b3d6bc2a8.jpg');
+  background-repeat: repeat;
+  background-size: 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.App {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+
+h1 {
+  margin-bottom: 1.2rem;
+  color: #2d3436;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.6);
+}
+
+
+.dark-toggle {
+  margin: 0.5rem auto 1.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffeaa7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-toggle:hover {
+  background-color: #fab1a0;
+  transform: scale(1.05);
+}
+
+
+.emoji-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;  
+}
+
+
+
+.emoji-row button {
+  font-size: 2.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.emoji-row button:hover {
+  animation: spinHover 0.8s linear;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes spinHover {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.15); }
+}
+
+button.selected {
+  border-bottom: 3px solid #74b9ff;
+}
+
+
+.mood-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+
+.react-calendar__navigation__label {
+  font-size: 1.4rem !important;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+.stats {
+  margin: 2rem auto; /* centers horizontally */
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 16px;
+  text-align: center; /* center text too */
+  color: #2d3436;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  max-width: 400px; /* optional: keeps it neat */
+}
+
+.stats h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 1px 2px 3px rgba(255,255,255,0.5);
+}
+
+.stats ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+
+.stats li {
+  margin: 0.4rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
+.export-btn {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.export-btn:hover {
+  background: #a29bfe;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(108, 92, 231, 0.4);
+}
+
+.calendar-wrapper {
+  width: 100%;
+}
+
+.react-calendar {
+  width: 100% !important;
+  border: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+
+.react-calendar__tile {
+  padding: 1rem 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.react-calendar__tile:enabled:hover {
+  background-color: #ffeaa7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 600;
+  color: #636e72;
+}
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.reset-btn {
+  background-color: #ff4757;
+}
+
+
+
+.App.violet-theme {
+  background: rgba(55, 0, 75, 0.85); 
+  color: #e0c3fc; 
+  box-shadow: 0 8px 32px rgba(75, 0, 130, 0.6);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.App.violet-theme h1 {
+  color: #d4bfff;
+  text-shadow: 1px 1px 6px #b17aff;
+}
+
+.App.violet-theme .dark-toggle {
+  background-color: #8e44ad;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(142, 68, 173, 0.5);
+}
+
+.App.violet-theme .dark-toggle:hover {
+  background-color: #a569bd;
+  transform: scale(1.05);
+}
+
+.App.violet-theme .emoji-row button.selected {
+  border-bottom-color: #bb8fce;
+}
+
+.App.violet-theme .emoji-row button:hover {
+  filter: drop-shadow(0 2px 8px rgba(139, 0, 255, 0.7));
+  animation: spinHover 0.8s linear;
+}
+
+.App.violet-theme .stats {
+  background: rgba(100, 54, 145, 0.4);
+  color: #ddd6f3;
+  box-shadow: 0 4px 12px rgba(90, 45, 130, 0.5);
+}
+
+.App.violet-theme .export-btn {
+  background: #9b59b6;
+  color: white;
+  box-shadow: 0 6px 16px rgba(155, 89, 182, 0.6);
+}
+
+.App.violet-theme .export-btn:hover {
+  background: #b284d1;
+  box-shadow: 0 6px 16px rgba(183, 132, 209, 0.8);
+  transform: translateY(-2px);
+}
+
+.App.violet-theme .dark-toggle {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+
+
+
+@media (max-width: 500px) {
+  .emoji-row {
+    gap: 12px;
+  }
+
+  .emoji-row button {
+    font-size: 2rem;
+  }
+
+  .App {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
