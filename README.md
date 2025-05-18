@@ -14,11 +14,9 @@
 
 ---
 
-## 🖼️ Preview
 
-![Mood Tracker Screenshot](https://your-screenshot-url.com) 
 
----
+
 
 ## 📦 Tech Stack
 
